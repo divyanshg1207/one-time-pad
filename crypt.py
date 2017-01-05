@@ -77,5 +77,7 @@ def decrypt(directory,key_directory):
             
     if directory[-8:]==".encrypt":
         directory = directory[:-8]+'.decrypt'
+    else:
+        directory += '.decrypt'
     with open(directory,'x') as f:
         f.write(string)
